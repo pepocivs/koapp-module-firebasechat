@@ -1,5 +1,5 @@
 {
-  "name": "koapp-module-firebasechat",
+  "name": "Firebase chat",
   "identifier": "koapp-module-firebasechat",
   "description": {
     "es-ES": "Sencillo chat con Firebase",
@@ -28,10 +28,21 @@
   ],
   "view": "modules/koapp-module-firebasechat/index.html",
   "files": [
-    "modules/koapp-module-firebasechat/controller.js", "modules/koapp-module-firebasechat/style.html"
+    "modules/koapp-module-firebasechat/controller.js",
+    "modules/koapp-module-firebasechat/style.html"
   ],
   "scope": {"demoKey": "demo text"},
-  "libs": [],
+  "libs": [{
+    "bower": {
+      "firebase": "3.5.0"
+    },
+    "src": "https://www.gstatic.com/firebasejs/3.5.0/firebase.js"
+  }, {
+    "bower": {
+      "angularfire": "2.0.2"
+    },
+    "src": "https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"
+  }],
   "config": [],
   "showOn": {
     "menu": true,
