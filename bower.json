@@ -1,0 +1,13 @@
+{
+  "name": "koapp-module-firebasechat",
+  "authors": "PepoCivs",
+  "description": "Single Firebase chat",
+  "keywords": [
+    "kingofapp",
+    "module"
+  ],
+  "license": "MIT",
+  "homepage": "www.pepocivs.com",
+  "private": true,
+  "dependencies": {}
+}
