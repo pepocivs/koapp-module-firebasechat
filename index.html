@@ -2,7 +2,7 @@
 
   <p>Usuario: <koa-input type="text" ng-model="message.userName"></p>
   <p>Mensaje: <koa-input type="text" ng-model="message.message"></p>
-  <koa-button ng-click="insertMessage(message)">Enviar</koa-button>
+  <koa-button ng-click="insertMessage()">Enviar</koa-button>
 
   <koa-item ng-repeat="chat in messages">
     <div class="avatar blue" item-icon></div>
