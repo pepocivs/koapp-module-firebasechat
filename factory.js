@@ -18,7 +18,7 @@ angular.module('factoria', ['firebase'])
     // storageBucket: $scope.databaseName + '.appspot.com',
     // messagingSenderId : $scope.senderId
 
-    var ref = firebase.database().ref('chat');
+    var ref = firebase.database().ref('messages');
     var messages = $firebaseArray(ref);
 
     function add(scope) {
@@ -28,22 +28,9 @@ angular.module('factoria', ['firebase'])
       });
     }
 
-    function get(messageId) {
-      return $firebaseArray(ref.child(messageId));
-    }
-
-    function deleteFn(scope) {
-      return scope.messages.$remove({
-        userName: scope.message.userName,
-        message: scope.message.message
-      });
-    }
-
 		var functions = {
 			getAll   : messages,
-			add      : add,
-			get      : get,
-			delete   : deleteFn
+			add      : add
 		};
 
 		return functions;
