@@ -16,13 +16,11 @@
     }
     $scope.insertMessage = insertMessage;
 
-    firechat.setFirebase($scope);
     $scope.messages = firechat.getAll;
-    applyScope();
-
+    // applyScope();
 
     function insertMessage() {
-      firechat.add($scope)
+      firechat.add($scope);
     }
 
     function applyScope() {

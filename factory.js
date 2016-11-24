@@ -18,12 +18,11 @@ angular.module('factoria', ['firebase'])
     // storageBucket: $scope.databaseName + '.appspot.com',
     // messagingSenderId : $scope.senderId
 
-
     var ref = firebase.database().ref('chat');
     var messages = $firebaseArray(ref);
 
     function add(scope) {
-      return scope.messages.$add({
+      return messages.$add({
         userName: scope.message.userName,
         message: scope.message.message
       });
@@ -48,6 +47,5 @@ angular.module('factoria', ['firebase'])
 		};
 
 		return functions;
-
 
 	}

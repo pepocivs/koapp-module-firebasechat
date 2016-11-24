@@ -1,16 +1,27 @@
 <div class="module firebasechat" ng-controller="firebasechatController">
 
-  <p>Usuario: <koa-input type="text" ng-model="message.userName"></p>
-  <p>Mensaje: <koa-input type="text" ng-model="message.message"></p>
-  <koa-button ng-click="insertMessage()">Enviar</koa-button>
+  <div class="chat-container">
+    <div ng-repeat="chat in messages">
+      <div two-line class="list">
+        <div>{{chat.userName}}</div>
+        <div class="grey">{{chat.message}}</div>
+      </div>
+    </div>
 
-  <koa-item ng-repeat="chat in messages">
-    <div class="avatar blue" item-icon></div>
-    <koa-item-body two-line>
-      <div>{{chat.userName}}</div>
-      <div secondary>{{chat.message}}</div>
-    </koa-item-body>
-  </koa-item>
+    <!-- <koa-item ng-repeat="chat in messages">
+      <koa-item-body two-line>
+        <div>{{chat.userName}}</div>
+        <div secondary>{{chat.message}}</div>
+      </koa-item-body>
+    </koa-item> -->
+  <div>
 
+  <koa-toolbar class="chatbox">
+    <koa-input class="chatelement" label="{{ 'firebasechat.user' | translate }}" type="text" ng-model="message.userName"></koa-input>
+    <koa-input class="chatelement" label="{{ 'firebasechat.message' | translate }}" type="text" ng-model="message.message"></koa-input>
+    <koa-button class="chatelement" ng-click="insertMessage()" class="inputs">
+      {{ 'firebasechat.send' | translate }}
+    </koa-button>
+  </koa-toolbar>
 
 </div>

@@ -1,3 +1,5 @@
 {
-    "firebasechat.hi": "Hola Mundo!"
+  "firebasechat.user": "Usuario",
+  "firebasechat.message": "Mensaje",
+  "firebasechat.send": "Enviar"
 }
