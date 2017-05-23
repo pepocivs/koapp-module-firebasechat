@@ -2,16 +2,31 @@
   'use strict';
 
   angular
-    .module('koapp-Module-Firebasechat', [])
-    .controller('koapp-Module-FirebasechatController', loadFunction);
+    .module('firebasechat', ['firebase'])
+    .controller('firebasechatController', loadFunction);
 
-  loadFunction.$inject = ['$scope', 'structureService', '$location'];
+  loadFunction.$inject = ['$scope', 'structureService', '$location', 'firechat'];
+  function loadFunction($scope, structureService, $location, firechat) {
 
-  function loadFunction($scope, structureService, $location) {
-    // Register upper level modules
-    structureService.registerModule($location, $scope, 'koapp-Module-Firebasechat');
-    // --- Start koapp-Module-FirebasechatController content ---
-    console.info('Hi! from koapp-Module-FirebasechatController');
-    // --- End koapp-Module-FirebasechatController content ---
+    structureService.registerModule($location, $scope, 'firebasechat');
+
+    $scope.message = {
+      'userName': 'Guest',
+      'message': ''
+    }
+    $scope.insertMessage = insertMessage;
+
+    $scope.messages = firechat.getAll;
+    // applyScope();
+
+    function insertMessage() {
+      firechat.add($scope);
+    }
+
+    function applyScope() {
+      if (!$scope.$$phase) {
+        $scope.$apply();
+      }
+    }
   }
 }());

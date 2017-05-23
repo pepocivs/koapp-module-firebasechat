@@ -1,50 +1,71 @@
 {
-  "name": "koapp-module-firebasechat",
-  "identifier": "koapp-module-firebasechat",
-  "description": {
-    "es-ES": "Sencillo chat con Firebase",
-    "en-US": "Single Firebase chat"
-  },
-  "documentation": {
-    "es-ES": "",
-    "en-US": ""
-  },
-  "descriptionShort": {
-    "es-ES": "Sencillo chat con Firebase",
-    "en-US": "Single Firebase chat"
-  },
-  "icon": "room",
-  "type": "A",
-  "version": "0.0.1",
-  "author": "PepoCivs",
-  "category": ["firebase","chat","koapp","single"],
-  "price": 0,
-  "subscription": false,
-  "canContain": false,
-  "platforms": [
-    "android",
-    "ios",
-    "windows"
-  ],
-  "view": "modules/koapp-module-firebasechat/index.html",
-  "files": [
-    "modules/koapp-module-firebasechat/controller.js", "modules/koapp-module-firebasechat/style.html"
-  ],
-  "scope": {"demoKey": "demo text"},
-  "libs": [],
-  "config": [],
-  "showOn": {
-    "menu": true,
-    "market": true,
-    "dragDrop": true
-  },
-  "images": {
-    "list": "modules/koapp-module-firebasechat/images/list.png",
-    "screenshots": [
-      "modules/koapp-module-firebasechat/images/screenshot01.png"
+    "name": "Firebase chat",
+    "identifier": "koapp-module-firebasechat",
+    "description": {
+        "es-ES": "Sencillo chat con Firebase",
+        "en-US": "Single Firebase chat"
+    },
+    "documentation": {
+        "es-ES": "modules/koapp-module-firebasechat/docs/es_ES.js",
+        "en-US": "modules/koapp-module-firebasechat/docs/en_US.js"
+    },
+    "descriptionShort": {
+        "es-ES": "Sencillo chat con Firebase",
+        "en-US": "Single Firebase chat"
+    },
+    "icon": "room",
+    "type": "A",
+    "version": "0.0.2",
+    "author": "PepoCivs",
+    "category": [
+        "firebase",
+        "chat",
+        "koapp",
+        "single"
     ],
-    "popover": "modules/koapp-module-firebasechat/images/popover.png",
-    "banner": "modules/koapp-module-firebasechat/images/banner.png",
-    "logo": "modules/koapp-module-firebasechat/images/logo.png"
-  }
+    "price": 0,
+    "subscription": false,
+    "canContain": false,
+    "platforms": [
+        "android",
+        "ios",
+        "windows"
+    ],
+    "view": "modules/koapp-module-firebasechat/index.html",
+    "files": [
+        "modules/koapp-module-firebasechat/controller.js",
+        "modules/koapp-module-firebasechat/style.html"
+    ],
+    "scope": {
+        "demoKey": "demo text"
+    },
+    "libs": [
+        {
+            "bower": {
+                "firebase": "3.5.0"
+            },
+            "src": "https://www.gstatic.com/firebasejs/3.5.0/firebase.js"
+        },
+        {
+            "bower": {
+                "angularfire": "2.0.2"
+            },
+            "src": "https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"
+        }
+    ],
+    "config": [],
+    "showOn": {
+        "menu": true,
+        "market": true,
+        "dragDrop": true
+    },
+    "images": {
+        "list": "modules/koapp-module-firebasechat/images/list.png",
+        "screenshots": [
+            "modules/koapp-module-firebasechat/images/screenshot01.png"
+        ],
+        "popover": "modules/koapp-module-firebasechat/images/popover.png",
+        "banner": "modules/koapp-module-firebasechat/images/banner.png",
+        "logo": "modules/koapp-module-firebasechat/images/logo.png"
+    }
 }
